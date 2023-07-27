@@ -35,6 +35,7 @@ router.hooks({
     switch (view) {
       // New Case for the Home View
       case "Home":
+        console.log("I'm Home!");
         axios
           // Get request to retrieve the current weather data using the API key and providing a city name
           .get(
