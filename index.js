@@ -7,6 +7,7 @@ import { default as axios } from "axios";
 const router = new Navigo("/");
 
 function render(state = store.Home) {
+  console.log("In render");
   console.log(state);
   document.querySelector("#root").innerHTML = `
       ${Header(state)}
@@ -70,6 +71,7 @@ router.hooks({
           });
         break;
       case "Pizza":
+        console.log("It's Pizza!")
         // New Axios get request utilizing already made environment variable
         axios
           .get(`${process.env.PIZZA_PLACE_API_URL}/pizzas`)
