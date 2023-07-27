@@ -34,7 +34,7 @@ router.hooks({
 
     switch (view) {
       // New Case for the Home View
-      case "Homey":
+      case "Home":
         render();
         axios
           // Get request to retrieve the current weather data using the API key and providing a city name
@@ -68,7 +68,7 @@ router.hooks({
             done();
           });
         break;
-      case "Pizzas":
+      case "Pizza":
         render();
         // New Axios get request utilizing already made environment variable
         axios
