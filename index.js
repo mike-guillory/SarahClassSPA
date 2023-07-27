@@ -62,13 +62,14 @@ router.hooks({
       store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
       store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
       store.Home.weather.description = response.data.weather[0].main;
-      */    render();
+      */  
             done();
           })
           .catch(err => {
             console.log(err);
             done();
           });
+          render();
         break;
       case "Pizza":
         console.log("It's Pizza!")
